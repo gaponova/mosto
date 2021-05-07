@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Mobile specific metas
+            ============================================ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- favicon
+            ============================================ -->
+  <link rel="shortcut icon" type="images/png" href="img/favicon.png" />
+
+  <!-- font-awesome CSS
+            ============================================ -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- Google Fonts
+            ============================================ -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- style CSS
+                ============================================ -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/animate.css" />
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Mosto</title>
+
+  <!-- comment
+              ============================================ -->
+</head>
+
+<body>
+  <header>
+    <div class="header-top">
+      <div class="navigation container">
+        <div class="navigation__row">
+          <div class="logo">
+            <a href="#"><img src="img/logo.png" alt="logo" title="Mosto"></a>
+          </div>
+          <nav>
+            <div class="menuToggle"><img src="img/menu-icon.png">
+            </div>
+            <ul class="header-menu">
+              <li class="header-menu__item"><a href="#" class="header-menu__link header-menu__link_active">HOMEPAGE</a>
+              </li>
+              <li class="header-menu__item header-menu__item_sub"><span class="header-menu__link header-menu__link1">ABOUT</span>
+                <span class="submenuToggle"><i class="fa fa-angle-down"></i></span>
+                <ul class="header-submenu">
+                  <li class="header-submenu__item"><a class="header-submenu__link" href="about.html">ABOUT US</a></li>
+                  <li class="header-submenu__item"><a class="header-submenu__link" href="pricing.html">PRICING PLAN</a>
+                  </li>
+                  <li class="header-submenu__item"><a class="header-submenu__link" href="facilities.html">FACILITIES</a>
+                  </li>
+                  <li class="header-submenu__item"><a class="header-submenu__link" href="single.html">SINGLE EVENT</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header-menu__item header-menu__item_sub"><span class="header-menu__link header-menu__link2">CLASSES</span>
+                <span class="submenuToggle2"><i class="fa fa-angle-down"></i></span>
+                <ul class="header-submenu2">
+                  <li class="header-submenu2__item"><a class="header-submenu2__link" href="#">OUR CLASSES</a></li>
+                  <li class="header-submenu2__item"><a class="header-submenu2__link" href="#">SINGLE CLASSES</a></li>
+                </ul>
+              </li>
+              <li class="header-menu__item header-menu__item_sub"><span class="header-menu__link header-menu__link3">TRAINER</span>
+                <span class="submenuToggle3"><i class="fa fa-angle-down"></i></span>
+                <ul class="header-submenu3">
+                  <li class="header-submenu3__item"><a class="header-submenu3__link" href="#">OUR TRAINER</a></li>
+                  <li class="header-submenu3__item"><a class="header-submenu3__link" href="#">SINGLE TRAINER</a></li>
+                </ul>
+              </li>
+              <li class="header-menu__item"><a href="#" class="header-menu__link">TESTIMONIALS</a></li>
+              <li class="header-menu__item"><a href="#" class="header-menu__link">CONTACT</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+  <!-- JS
+        ============================================ -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/adaptive-menu.js"></script>
+  <script src="js/top.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script> -->
+  <script src="js/wow.js"></script>
+  <script src="js/scroll-menu.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('body').append('<div id="toTop">^</div>');
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+          $('#toTop').fadeIn();
+        } else {
+          $('#toTop').fadeOut();
+        }
+      });
+
+      $('#toTop').click(function () {
+        $('body, html').animate({
+          scrollTop: 0
+        }, 400);
+      });
+    });
+  </script>
+</body>
+
+</html>
