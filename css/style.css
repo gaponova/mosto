@@ -24,9 +24,36 @@ img {
   height: auto;
 }
 
+.btn {
+  display: inline-block;
+  font-family: "openSans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #fff;
+  padding: 11px 34px;
+  border: 1px solid #665cb2;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn_nav {
+  margin-left: 40px;
+}
+
+.btn:hover {}
+
+.btn-trans:hover {
+  background-color: #fff;
+  color: #ff4343;
+}
+
 .container {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 /*----------Стили для header----------*/
@@ -36,12 +63,6 @@ header {
   left: 0;
   right: 0;
   z-index: 200;
-}
-
-.container {
-  position: relative;
-  max-width: 1170px;
-  margin: 0 auto;
   padding: 0 15px;
 }
 
@@ -50,10 +71,11 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  padding: 0 15px;
+
   z-index: 1000;
   background-color: rgba(59, 49, 158, 1);
 }
+
 
 .navigation__row {
   display: flex;
@@ -62,6 +84,7 @@ header {
   align-items: center;
   margin: 0 -15px;
   z-index: 1000;
+  padding: 0 15px;
 }
 
 .header-menu {
@@ -70,12 +93,17 @@ header {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-
+  align-items: center;
 }
 
 .header-menu__item {
   position: relative;
   transition: 0.3s;
+}
+
+.header-menu__item:hover .header-menu__link,
+.header-menu__item:hover .fa-angle-down {
+  color: #ff4343;
 }
 
 .header-menu__item_sub {
@@ -84,22 +112,19 @@ header {
 
 .header-menu__link {
   display: inline-block;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
   color: #fff;
-  padding: 40px 15px;
+  padding: 33px 15px;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .header-menu__link_active {
-  color: #FFDA0C;
+  color: #ff4343;
 }
 
-.header-menu__link:hover {
-  color: #FFDA0C;
-}
 
 .header-menu__link1,
 .header-menu__link2,
@@ -113,11 +138,14 @@ header {
   top: 42px;
   color: #fff;
   transition: 0.3s;
+  cursor: pointer;
 }
 
-.header-menu__item:hover .fa-angle-down {
-  color: #FFDA0C;
+.fa-angle-down_active {
+  color: #ff4343;
 }
+
+
 
 .header-submenu,
 .header-submenu2,
@@ -127,8 +155,8 @@ header {
   list-style: none;
   display: none;
   position: absolute;
-  top: 80px;
-  background-color: #FFDA0C;
+  top: 89px;
+  background: #3b368c;
   width: 200px;
   z-index: 200;
 }
@@ -136,7 +164,7 @@ header {
 .header-submenu__item,
 .header-submenu2__item,
 .header-submenu3__item {
-  border-bottom: 1px solid rgba(5, 13, 36, 0.2);
+  border-bottom: 1px solid rgb(34%, 30%, 73%, 1);
   transition: 0.3s;
 }
 
@@ -150,18 +178,27 @@ header {
 .header-submenu2__link,
 .header-submenu3__link {
   display: block;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
   padding: 15px;
-  color: rgba(2%, 5%, 14%, 1);
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
 .header-submenu__item:hover,
 .header-submenu2__item:hover,
 .header-submenu3__item:hover {
-  background-color: #ffe44b;
+  background-color: #ffffff;
+  padding-left: 5px;
+
+}
+
+.header-submenu__item:hover .header-submenu__link,
+.header-submenu2__item:hover .header-submenu2__link,
+.header-submenu3__item:hover .header-submenu3__link {
+  color: #ff4343;
 }
 
 /*----------Стили для скролла меню ----------*/
@@ -244,6 +281,7 @@ header {
   z-index: 1000;
 }
 
+
 /*----------Адаптив----------*/
 
 @media only screen and (max-width: 1400px) {}
@@ -264,6 +302,10 @@ header {
     padding: 25px 0;
   }
 
+  .navigation__row {
+    padding: 20px 15px;
+  }
+
   .menuToggle {
     display: block;
   }
@@ -271,17 +313,21 @@ header {
   .header-menu {
     display: none;
     position: absolute;
-    top: 48px;
+    top: 86px;
     left: 0;
     right: 0;
-    background-color: rgba(2%, 5%, 14%, 1);
+    background-color: rgb(71 61 171);
     padding-bottom: 20px;
   }
 
   .header-menu__item {
     display: block;
     text-align: center;
-    /*       padding: 15px 0; */
+    border-bottom: 1px solid rgb(34%, 30%, 73%, 1);
+  }
+
+  .header-menu__item:hover {
+    background-color: #fff;
   }
 
   .header-menu__link {
@@ -291,7 +337,6 @@ header {
   .header-submenu,
   .header-submenu2,
   .header-submenu3 {
-
     position: relative;
     width: auto;
     top: 0;
@@ -301,7 +346,17 @@ header {
     padding-right: 0;
   }
 
+  .header-submenu__item:hover,
+  .header-submenu2__item:hover,
+  .header-submenu3__item:hover {
+    background-color: #504ab1;
+  }
+
   .fa-angle-down {
     top: 17px;
+  }
+
+  .btn_nav {
+    margin: 5px 0;
   }
 }

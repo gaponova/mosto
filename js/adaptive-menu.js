@@ -17,7 +17,7 @@ $(function () {
 	});
 
 	$('.submenuToggle2, .header-menu__link2').on('click', function () {
-		$('.header-submenu2').slideToggle(500, function () {
+		$('.header-submenu2').slideToggle(400, function () {
 			if ($(this).css('display') === 'none') {
 				$(this).removeAttr('style');
 			}
@@ -31,5 +31,6 @@ $(function () {
 			}
 		});
 	});
+
 
 });
