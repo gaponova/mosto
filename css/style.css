@@ -242,6 +242,9 @@ header {
   content: "";
   display: block;
   background-image: url(../img/header-shape.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   width: 100%;
   height: 242px;
   position: absolute;
@@ -318,7 +321,6 @@ header {
   box-shadow: 0 17px 24px 0 rgb(7%, 33%, 98%, 0.5);
 }
 
-.btn-active {}
 
 /*----------Стили для блока с видео ----------*/
 
@@ -499,10 +501,82 @@ input:checked+#overlay>* {
 }
 
 
+/*----------Стили для блока секции feature ----------*/
+
+.feature .lSPager {
+  display: none;
+}
+
+.feature .lSSlideWrapper {
+  overflow: visible;
+}
 
 
+.feature {
+  padding: 120px 0;
+}
 
+.feature-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 
+.feature-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.feature-item_1 .feature-thumb {
+  width: 160px;
+  height: 160px;
+  padding: 25px;
+  border-radius: 50%;
+  background: linear-gradient(0deg, #e2906e 0, #e83a99 100%);
+  box-shadow: 2.419px 9.703px 12.48px 0.52px rgb(232 58 153 / 50%);
+  margin: 0 auto 30px;
+}
+
+.feature-item_2 .feature-thumb {
+  width: 160px;
+  height: 160px;
+  padding: 25px;
+  border-radius: 50%;
+  background: linear-gradient(0deg, #d180dd 0, #796be8 100%);
+  box-shadow: 2.419px 9.703px 12.48px 0.52px rgb(121 107 232 / 50%);
+  margin: 0 auto 30px;
+}
+
+.feature-item_3 .feature-thumb {
+  width: 160px;
+  height: 160px;
+  padding: 25px;
+  border-radius: 50%;
+  background: linear-gradient(0deg, #e1358f 0, #7e6ce7 100%);
+  box-shadow: 4.232px 12.292px 10.56px 0.44px rgb(121 107 232 / 50%);
+  margin: 0 auto 30px;
+}
+
+.feature-content {}
+
+.feature-item_title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 38px;
+  color: #3b368c;
+}
+
+.feature-item_subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #504c89;
+}
+
+.feature-item_2 {}
+
+.feature-item_3 {}
 
 
 
