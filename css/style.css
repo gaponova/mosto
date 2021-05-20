@@ -584,23 +584,43 @@ input:checked+#overlay>* {
 
 .boost {}
 
+.boost-decs {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .boost__subtitle {}
 
 .boost__title {}
 
 .boost__text {}
 
-.boost-row {}
+.boost-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -15px;
+}
 
-.boost-box {}
+.boost-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(50% - 30px);
+  margin: 15px;
+  padding: 30px;
+  border: 1px solid #acacf4;
+  border-radius: 10px;
+}
 
-.boost-box__img {}
+.boost-item__thumb {
+  width: 200px;
+}
 
-.boost-item {}
-
-.boost-item__thumb {}
-
-.boost-item__img {}
+.boost-item__img {
+  display: block;
+}
 
 .boost-item__content {}
 
