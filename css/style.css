@@ -303,7 +303,7 @@ header {
 
 .btn-transparent {
   display: inline-block;
-  font-family: "openSans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 28px;
@@ -582,7 +582,9 @@ input:checked+#overlay>* {
 
 /*----------Стили для блока секции boost ----------*/
 
-.boost {}
+.boost {
+  position: relative;
+}
 
 .boost-decs {
   max-width: 750px;
@@ -596,6 +598,13 @@ input:checked+#overlay>* {
 
 .boost__text {}
 
+.boost-img {
+  position: absolute;
+  top: 15%;
+  left: -11%;
+  z-index: -2;
+}
+
 .boost-row {
   display: flex;
   flex-wrap: wrap;
@@ -603,32 +612,187 @@ input:checked+#overlay>* {
   margin: 0 -15px;
 }
 
+.boost-box {}
+
+.boost-box__empty {
+  width: calc(45%);
+}
+
+.boost-box__full {
+  position: relative;
+  width: calc(55%);
+  background: rgb(100%, 100%, 100%, 1);
+  z-index: 0;
+}
+
 .boost-item {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: calc(50% - 30px);
-  margin: 15px;
+  margin: 0 15px 30px;
   padding: 30px;
+  background-color: rgba(255, 255, 255, 1);
   border: 1px solid #acacf4;
   border-radius: 10px;
+  transition: 0.3s;
 }
 
+.boost-item:hover {
+  background-color: rgba(255, 255, 255, 0);
+  color: #ffffff;
+}
+
+.boost-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/feature-bg.png) no-repeat center center;
+  background-size: cover;
+  border-radius: 10px;
+  transition: 0.3s;
+  opacity: 1;
+  z-index: -1;
+}
+
+.boost-item_active {
+  background: url(../img/feature-bg.png) no-repeat center center;
+  background-size: cover;
+}
+
+
+
 .boost-item__thumb {
-  width: 200px;
+  position: relative;
+  min-width: 100px;
+  margin-right: 20px;
+
+
+}
+
+.circle {
+  animation-name: circle;
+  position: absolute;
+  top: -12px;
+  left: -10px;
+  width: 93px;
+  height: 93px;
+  border: 1px solid rgb(67%, 67%, 96%, 0.5);
+  border-radius: 50%;
+
+
+}
+
+.boost-item:hover .circle {
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.circle_active {
+  position: absolute;
+  top: -12px;
+  left: -10px;
+  width: 93px;
+  height: 93px;
+  border: 1px solid rgb(67%, 67%, 96%, 0.5);
+  border-radius: 50%;
+
+  animation-name: circle;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.circle::before,
+.circle_active::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  width: 13px;
+  height: 13px;
+  background-image: linear-gradient(0deg, #e2906e 0, #e83a99 100%);
+  border-radius: 50%;
+}
+
+.circle::after,
+.circle_active::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  width: 13px;
+  height: 13px;
+  background-image: linear-gradient(0deg, #e2906e 0, #e83a99 100%);
+  border-radius: 50%;
+}
+
+
+@keyframes circle {
+  from {
+
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.circle_purple::before {
+  background-image: linear-gradient(0deg, #e1358f 0, #7e6ce7 100%);
+}
+
+.circle_purple::after {
+  background-image: linear-gradient(0deg, #e1358f 0, #7e6ce7 100%);
 }
 
 .boost-item__img {
   display: block;
+  box-shadow: 2.419px 9.703px 12.48px 0.52px rgba(67%, 67%, 96%, 0.2);
+  border-radius: 50%;
+  /* padding: 10px; */
+}
+
+.boost-item__img_pink {
+  box-shadow: 2.419px 9.703px 12.48px 0.52px rgba(232, 58, 153, 0.2);
 }
 
 .boost-item__content {}
 
-.boost-item__title {}
+.boost-item__title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 600;
+  color: #3b368c;
+  margin-bottom: 10px;
+}
 
-.boost-item__info {}
+.boost-item__info {
+  margin: 0;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #3b368c;
+}
 
+.boost-item__title_active,
+.boost-item__info_active {
+  color: #fff;
+}
 
+.boost-item:hover .boost-item__title,
+.boost-item:hover .boost-item__info {
+  color: #fff;
+}
 
 
 /*----------Кнопка Наверх----------*/
