@@ -808,6 +808,7 @@ input:checked+#overlay>* {
   height: 60px;
   background: #ffffff;
   color: rgb(0, 0, 0);
+  /* border: 1px solid rgb(93%, 41%, 31%, 0.5); */
   border-radius: 50%;
   transition: 0.3s;
   margin: 0 5px 0 15px;
@@ -822,7 +823,188 @@ input:checked+#overlay>* {
 
 /*----------Стили для блока секции experience ----------*/
 
+.experience {
+  position: relative;
+  background-color: #F0F5FC;
+  background-image: url(../img/experience-bg.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding: 80px 0;
+}
 
+.experience-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.experience-desc {
+  max-width: 600px;
+}
+
+.experience__subtitle {
+  margin: 0;
+  margin: 0;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #ff8a00;
+  margin-bottom: 15px;
+}
+
+.experience__title {
+  margin: 0;
+  margin: 0;
+  font-size: 54px;
+  line-height: 64px;
+  font-weight: 700;
+  color: #3b368c;
+  margin-bottom: 15px;
+}
+
+.experience__text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #504c89;
+}
+
+.experience-item {
+  margin: 30px 15px;
+}
+
+.experience-item_info {
+  width: calc(65% - 30px);
+}
+
+.experience-item_img {
+  width: calc(35% - 30px);
+}
+
+.experience-box-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.experience-box {
+  position: relative;
+  margin: 15px;
+  width: calc(50% - 30px);
+  border-radius: 20px;
+  border: 1px solid #6e7fee;
+  overflow: hidden;
+  padding: 40px 25px;
+  margin-bottom: 20px;
+  text-align: center;
+  z-index: 0;
+}
+
+.experience-box:hover .experience-box__title,
+.experience-box:hover .experience-box__desc {
+  color: #fff;
+}
+
+.experience-box::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background-image: url(../img/indigo-bg.png);
+  background-size: cover;
+  transition: all ease .3s;
+  opacity: 0;
+  z-index: -1;
+}
+
+.experience-box:hover.experience-box::before {
+  opacity: 1;
+}
+
+.experience-box_active {
+  background-image: url(../img/indigo-bg.png);
+  background-size: cover;
+
+}
+
+.experience-box_active .experience-box__title,
+.experience-box_active .experience-box__desc {
+  color: #fff;
+}
+
+.experience-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience-thumb_violet {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(0deg, #d180dd 0, #796be8 100%);
+  box-shadow: 2.419px 9.703px 12.48px 0.52px rgb(121 107 232 / 50%);
+  margin: 0 auto 30px;
+  border-radius: 50%;
+}
+
+
+
+.experience-thumb_pink {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(0deg, #e2906e 0, #e83a99 100%);
+  box-shadow: 2.419px 9.703px 12.48px 0.52px rgb(232 58 153 / 50%);
+  margin: 0 auto 30px;
+  border-radius: 50%;
+}
+
+.experience-thumb_purple {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(0deg, #e1358f 0, #7e6ce7 100%);
+  box-shadow: 4.232px 12.292px 10.56px 0.44px rgb(121 107 232 / 50%);
+  margin: 0 auto 30px;
+  border-radius: 50%;
+}
+
+.experience-thumb_orange {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(0deg, #f6be65 0, #e6603a 100%);
+  box-shadow: 2.419px 9.703px 18.24px 0.76px rgb(253 160 133 / 50%);
+  margin: 0 auto 30px;
+  border-radius: 50%;
+}
+
+.experience-box__img {}
+
+.experience-box__title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 600;
+  color: #3b368c;
+  margin-bottom: 10px;
+}
+
+.experience-box__desc {
+  margin: 0;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #3b368c;
+}
+
+.experience-item_img {}
+
+.experience-item__pic {
+  position: relative;
+  top: 70px;
+  max-width: 200%;
+}
 
 
 /*----------Кнопка Наверх----------*/
