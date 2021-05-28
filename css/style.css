@@ -1121,13 +1121,28 @@ input:checked+#overlay>* {
   color: #fff;
 }
 
-.fa {}
 
-.fa-windows {}
+/*----------Стили для секции addons ----------*/
 
-.fa-apple {}
+.addons {}
 
-.fa-android {}
+.container {}
+
+.boost-decs {}
+
+.boost__subtitle {}
+
+.boost__title {}
+
+.boost__text {}
+
+.addons-container {}
+
+.addons-item {}
+
+.addons-item_center {}
+
+.addons-item__img {}
 
 
 /*----------Кнопка Наверх----------*/
