@@ -1124,23 +1124,117 @@ input:checked+#overlay>* {
 
 /*----------Стили для секции addons ----------*/
 
-.addons {}
+.addons {
+  padding: 120px 15px;
+}
 
-.container {}
+.addons-container {
+  position: relative;
+  width: 730px;
+  height: 730px;
+  border-radius: 50%;
+  background: #f0f5fc;
+  margin: 0 auto;
+}
 
-.boost-decs {}
+.addons-container::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+  background-image: url(../img/addon-bg.png);
+  transform: translate(-50%, -50%);
+  width: 1920px;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: -1;
+}
 
-.boost__subtitle {}
+.addons-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 135px;
+  height: 135px;
+  background: #fff;
+  border-radius: 50%;
+}
 
-.boost__title {}
+.addons-item_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-.boost__text {}
+.addons-item:nth-child(2) {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-.addons-container {}
+.addons-item:nth-child(3) {
+  position: absolute;
+  top: 143px;
+  left: 110px;
+}
 
-.addons-item {}
+.addons-item:nth-child(4) {
+  position: absolute;
+  top: 143px;
+  right: 110px;
+}
 
-.addons-item_center {}
+.addons-item:nth-child(5) {
+  position: absolute;
+  top: 330px;
+  left: 30px;
+}
+
+.addons-item:nth-child(6) {
+  position: absolute;
+  top: 330px;
+  right: 30px;
+}
+
+.addons-item:nth-child(7) {
+  position: absolute;
+  bottom: 60px;
+  right: 145px;
+}
+
+.addons-item:nth-child(8) {
+  position: absolute;
+  bottom: 60px;
+  left: 145px;
+}
+
+.addons-item_center::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+  width: 540px;
+  height: 540px;
+  border: 1px solid #a6c1ff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.addons-item_center::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+  width: 230px;
+  height: 230px;
+  border: 1px solid #a6c1ff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .addons-item__img {}
 
